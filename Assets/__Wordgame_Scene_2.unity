@@ -210,7 +210,7 @@ MonoBehaviour:
   wordListText: {fileID: 4900000, guid: 22e5a51e6732c452fab90efed574a934, type: 3}
   numToParseBeforeYield: 10000
   wordLengthMin: 1
-  wordLengthMax: 2
+  wordLengthMax: 5
   currLine: 0
   totalLines: 0
   longWordCount: 0
@@ -323,8 +323,8 @@ MonoBehaviour:
   - {r: 0.59607846, g: 0.7725491, b: 0.6627451, a: 1}
   - {r: 0.85098046, g: 0.6156863, b: 0.5058824, a: 1}
   - {r: 0.854902, g: 0.854902, b: 0.854902, a: 1}
-  levelThreshold: 0
-  sceneToLoad: 1
+  levelThreshold: 30
+  sceneToLoad: 3
   loadSelf: 0
   mode: 0
   currLevel:
@@ -335,7 +335,7 @@ MonoBehaviour:
   bigLetters: []
   bigLettersActive: []
   testWord: 
---- !u!1 &1451315711
+--- !u!1 &1709852630
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1000011893506122, guid: 19cec85269b9744ac9a379c2af612e47,
@@ -343,10 +343,11 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1451315712}
-  - component: {fileID: 1451315715}
-  - component: {fileID: 1451315714}
-  - component: {fileID: 1451315713}
+  - component: {fileID: 1709852631}
+  - component: {fileID: 1709852635}
+  - component: {fileID: 1709852634}
+  - component: {fileID: 1709852633}
+  - component: {fileID: 1709852632}
   m_Layer: 5
   m_Name: Scoreboard
   m_TagString: Untagged
@@ -354,13 +355,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1451315712
+--- !u!224 &1709852631
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 224000012587687706, guid: 19cec85269b9744ac9a379c2af612e47,
     type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451315711}
+  m_GameObject: {fileID: 1709852630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -373,13 +374,13 @@ RectTransform:
   m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 200, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1451315713
+--- !u!114 &1709852632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 114255911423155530, guid: 19cec85269b9744ac9a379c2af612e47,
     type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451315711}
+  m_GameObject: {fileID: 1709852630}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4cb11f23840a4a50991d905ccc9e831, type: 3}
@@ -389,13 +390,25 @@ MonoBehaviour:
     type: 2}
   _score: 0
   _scoreString: 
---- !u!114 &1451315714
+--- !u!114 &1709852633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114000012221241008, guid: 19cec85269b9744ac9a379c2af612e47,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709852630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1709852634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 114000010030466190, guid: 19cec85269b9744ac9a379c2af612e47,
     type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451315711}
+  m_GameObject: {fileID: 1709852630}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
@@ -423,13 +436,13 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!222 &1451315715
+--- !u!222 &1709852635
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 222000012274043902, guid: 19cec85269b9744ac9a379c2af612e47,
     type: 2}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451315711}
+  m_GameObject: {fileID: 1709852630}
   m_CullTransparentMesh: 0
 --- !u!1 &2019153171
 GameObject:
@@ -517,7 +530,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1451315712}
+  - {fileID: 1709852631}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

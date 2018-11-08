@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public enum GameMode
 {
@@ -26,6 +27,11 @@ public class WordGame : MonoBehaviour {
     public Color bigColorSelected = new Color(1f, 0.9f, 0.7f);
     public Vector3 bigLetterCenter = new Vector3(0, -16, 0);
     public Color[] wyrdPalette;
+
+    [Header("Scene Management")]
+    public int levelThreshold;
+    public int sceneToLoad = 1;
+    public bool loadSelf = false;
 
     [Header("Set Dynamically")]
     public GameMode mode = GameMode.preGame;
@@ -181,6 +187,7 @@ public class WordGame : MonoBehaviour {
                 left += (columnWidth + .5f) * letterSize;
             }
         }
+        levelThreshold = wyrds.Count > 1 ? wyrds.Count * 2 : 1;
 
         bigLetters = new List<Letter>();
         bigLettersActive = new List<Letter>();
@@ -252,6 +259,19 @@ public class WordGame : MonoBehaviour {
 
     void Update()
     {
+        if (Scoreboard.S.score >= S.levelThreshold)
+        {
+            if (loadSelf)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            else
+            {
+                SceneManager.LoadScene(S.sceneToLoad);
+            }
+        }
+
+
         Letter ltr;
         char c;
 
@@ -355,14 +375,17 @@ public class WordGame : MonoBehaviour {
         if (foundTestWord)
         {
             int numContained = containedWords.Count;
-            int ndx;
+            int ndx = 0;
 
             for(int i = 0; i  < containedWords.Count; i++)
             {
                 ndx = numContained - i - 1;
                 HighlightWyrd(containedWords[ndx]);
                 ScoreManager.SCORE(wyrds[containedWords[ndx]], i + 2);
+ 
             }
+          
+            
         }
 
         ClearBigLettersActive();

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +12,9 @@ public class ScoreManager : MonoBehaviour
     public Vector3 scoreMidPoint = new Vector3(1, 1, 0);
     public float scoreTravelTime = 3f;
     public float scoreComboDelay = 0.5f;
+
+    
+
 
     private RectTransform rectTrans;
 
@@ -54,6 +57,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         fs.GetComponent<Text>().text = txt;
+
     }
 
 

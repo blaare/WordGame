@@ -4,4 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/__WordGame_Scene_0.unity
+    guid: 71b3942c7a4794ef8ac171268f62e219
+  - enabled: 1
+    path: Assets/__Wordgame_Scene_1.unity
+    guid: 4423ebdab3517f241b9131e7b7e557ed
+  - enabled: 1
+    path: Assets/__Wordgame_Scene_2.unity
+    guid: 70bb9fceca2cf8d4598b334af0b886bb
+  - enabled: 1
+    path: Assets/__Wordgame_Scene_3.unity
+    guid: bb68279cc44014c45b9e6befbafcbe32
+  m_configObjects: {}
